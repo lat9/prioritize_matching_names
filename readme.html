@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Search:  Prioritize Matching Names</title>
+
+<style type="text/css">
+<!--
+a, a:active, a:visited {
+  color: #006666;
+  text-decoration: none
+}
+a:hover {
+    color:#00CC99;
+    text-decoration: underline;
+}
+BODY, P, H1, H2, H3, H4, H5, H6, LI, TD, DD, DT {
+  font-family: Verdana, AvantGarde, Tahoma, Arial, sans-serif;
+  font-size: 10pt;
+  color: black;
+  padding: 0px;
+  margin: 20px;
+}
+H1, H2, H3, H4 {
+  font-weight: bold
+}
+h1 {
+  font-size: 20px;
+}
+h2 {
+  font-size: 16px;
+}
+code {
+  padding-left: 25px;
+}
+ol li, ul li {
+  margin-left: 0;
+}
+ol li ul li, ul li ul li, ol li ol li {
+  margin: 0 auto 5px;
+}
+pre {
+  padding-left: 40px;
+}
+.corefile { color: red; }
+-->
+</style>
+</head>
+
+<body>
+  <h1>Search: Prioritize Matching Names &mdash; Zen Cart v1.5.3 and later</h1>
+  <h3>Version 1.0.0 (lat9)</h3>
+  <p>Current Support Thread at Zen Cart Forums is <a href="https://www.zen-cart.com/showthread.php?218702-Search-Prioritize-Matching-Names-Support-Thread" target="_blank">here</a>.</p>
+
+
+  <h2>What it does</h2>
+  <p>The default &quot;advanced search&quot; keyword-matching gives equal weight to matches found in a product's name, model number and manufacturer's name, as well as those matches found in a product's meta-tags and meta-tag descriptions.  Equal weight is also given to matches found in a product's description (if the <em>Search in Product Descriptions</em> box is checked).</p>
+  <p>This plugin makes a slight update to the processing, giving priority (i.e. they're displayed first) to those matches found in a <em>product's name</em>.  Since it makes use of the <a href="http://vinosdefrutastropicales.com/blog/?p=242" target="_blank">auto-loaded observers</a> feature, introduced in Zen Cart v1.5.3, the plugin requires Zen Cart v1.5.3 or later for its proper operation.</p>
+  
+  <h2>Installation</h2>
+  <p>There are no core-file overwrites in this plugin, nor does it make database modifications; you should <strong>always</strong> backup your cart's database and files prior to making any changes.</p>
+  <ol>
+    <li>Use your favorite FTP program to copy the auto-loaded observer script to your store's file-system:<ol>
+      <li>/includes/classes/observers/auto.prioritize_search_match_in_name.php</li>
+    </ol></li>
+  </ol>
+  
+  <h2>Version History:</h2>
+    <ul>
+      <li>v1.0.0, 20151030, Initial release.</li>
+    </ul>
+</body>
+</html>
