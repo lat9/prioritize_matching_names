@@ -23,7 +23,7 @@ class zcObserverPrioritizeSearchMatchInName extends base
         switch ($eventID) {
             case 'NOTIFY_SEARCH_SELECT_STRING':
                 global $db, $keywords, $select_str;
-                if (isset ($keywords) && zen_not_null ($keywords) && zen_parse_search_string (stripslashes ($_GET['keyword']), $search_keywords)) {
+                if (!empty($keywords) && zen_parse_search_string(stripslashes($_GET['keyword']), $search_keywords)) {
                     $in_name_select = '';
                     foreach ($search_keywords as $current_keyword) {
                         switch ($current_keyword) {
@@ -36,7 +36,7 @@ class zcObserverPrioritizeSearchMatchInName extends base
 
                             default:
                                 $in_name_select .= "pd.products_name LIKE '%:keywords%'";
-                                $in_name_select = $db->bindVars ($in_name_select, ':keywords', $current_keyword, 'noquotestring');
+                                $in_name_select = $db->bindVars($in_name_select, ':keywords', $current_keyword, 'noquotestring');
                                 break;
                         }
                     }
@@ -47,7 +47,7 @@ class zcObserverPrioritizeSearchMatchInName extends base
 
             case 'NOTIFY_SEARCH_ORDERBY_STRING':
                 global $listing_sql;
-                $listing_sql = str_ireplace ('order by', 'order by' . $this->order_by, $listing_sql);
+                $listing_sql = str_ireplace('order by', 'order by' . $this->order_by, $listing_sql);
                 break;
 
             default:
