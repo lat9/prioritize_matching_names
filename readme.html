@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf8">
 <title>Search:  Prioritize Matching Names</title>
 
 <style>
-<!--
 a, a:active, a:visited {
   color: #006666;
   text-decoration: none
@@ -14,7 +13,7 @@ a:hover {
     color:#00CC99;
     text-decoration: underline;
 }
-BODY, P, H1, H2, H3, H4, H5, H6, LI, TD, DD, DT {
+body, p, h1, h2, h3, h4, h5, h6, li, td, dd, dt {
   font-family: Verdana, AvantGarde, Tahoma, Arial, sans-serif;
   font-size: 10pt;
   color: black;
@@ -29,19 +28,18 @@ ol li, ul li { margin-left: 0; }
 ol li ul li, ul li ul li, ol li ol li { margin: 0 auto 5px; }
 pre { padding-left: 40px; }
 .corefile { color: red; }
--->
 </style>
 </head>
 
 <body>
-  <h1>Search: Prioritize Matching Names &mdash; Zen Cart v1.5.3 and later</h1>
-  <h3>Version 1.0.0 (lat9). Copyright &copy; 2015-2020, <a href="https://vinosdefrutastropicales.com" target="_blank">Vinos de Frutas Tropicales</a>.</h3>
+  <h1>Search: Prioritize Matching Names &mdash; Zen Cart v1.5.7a and later</h1>
+  <h3>Version 1.0.0 (lat9). Copyright &copy; 2015-2023, <a href="https://vinosdefrutastropicales.com" target="_blank">Vinos de Frutas Tropicales</a>.</h3>
   <p>Current Support Thread at Zen Cart Forums is <a href="https://www.zen-cart.com/showthread.php?218702-Search-Prioritize-Matching-Names-Support-Thread" target="_blank">here</a>.</p>
 
 
   <h2>What it does</h2>
   <p>The default &quot;advanced search&quot; keyword-matching gives equal weight to matches found in a product's name, model number and manufacturer's name, as well as those matches found in a product's meta-tags and meta-tag descriptions.  Equal weight is also given to matches found in a product's description (if the <em>Search in Product Descriptions</em> box is checked).</p>
-  <p>This plugin makes a slight update to the processing, giving priority (i.e. they're displayed first) to those matches found in a <em>product's name</em>.  Since it makes use of the <a href="https://vinosdefrutastropicales.com/index.php?main_page=article&p=28" target="_blank">auto-loaded observers</a> feature, introduced in Zen Cart v1.5.3, the plugin requires Zen Cart v1.5.3 or later for its proper operation.</p>
+  <p>This plugin makes a slight update to the processing, giving priority (i.e. they're displayed first) to those matches found in a <em>product's name</em>.  The plugin requires Zen Cart v1.5.7a or later for its proper operation.</p>
   
   <h2>Installation</h2>
   <p>There are no core-file overwrites in this plugin, nor does it make database modifications; you should <strong>always</strong> backup your cart's database and files prior to making any changes.</p>
@@ -53,6 +51,9 @@ pre { padding-left: 40px; }
   
   <h2>Version History:</h2>
     <ul>
+      <li>v1.0.1, 2023-07-01 (lat9)<ul>
+        <li>BUGFIX: Adding class-defined property for PHP 7.4 and later.</li>
+      </ul></li>
       <li>v1.0.0, 2015-10-30, Initial release.</li>
     </ul>
 </body>
