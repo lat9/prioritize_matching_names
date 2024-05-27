@@ -1,14 +1,15 @@
 <?php
 // -----
-// Part of the "Search: Prioritize Matching Names" plugin for Zen Cart v1.5.7 and later
-// Copyright (C) 2015-2023, Vinos de Frutas Tropicales (lat9)
+// Part of the "Search: Prioritize Matching Names" plugin for Zen Cart v1.5.8a and later
+// Copyright (C) 2015-2024, Vinos de Frutas Tropicales (lat9)
+//
+// Last updated: v1.0.1
 //
 // @license https://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
 //
 class zcObserverPrioritizeSearchMatchInName extends base
 {
-    protected
-        $order_by;
+    protected string $order_by;
 
     public function __construct()
     {
