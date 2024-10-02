@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf8">
-<title>Search:  Prioritize Matching Names</title>
+<title>Search: Prioritize Matching Names</title>
 
 <style>
 a, a:active, a:visited {
@@ -33,13 +33,13 @@ pre { padding-left: 40px; }
 
 <body>
   <h1>Search: Prioritize Matching Names &mdash; Zen Cart v1.5.8a and later</h1>
-  <h3>Version 1.0.1 (lat9). Copyright &copy; 2015-2024, <a href="https://vinosdefrutastropicales.com" target="_blank">Vinos de Frutas Tropicales</a>.</h3>
+  <h3>Version 2.0.0 (lat9). Copyright &copy; 2015-2024, <a href="https://vinosdefrutastropicales.com" target="_blank">Vinos de Frutas Tropicales</a>.</h3>
   <p>Current Support Thread at Zen Cart Forums is <a href="https://www.zen-cart.com/showthread.php?218702-Search-Prioritize-Matching-Names-Support-Thread" target="_blank">here</a>.</p>
   <p>Zen Cart Plugin Download Link: <a href="https://www.zen-cart.com/downloads.php?do=file&id=2038" target="_blank">https://www.zen-cart.com/downloads.php?do=file&id=2038</a></p>
 
   <h2>What it does</h2>
   <p>The default &quot;search&quot; keyword-matching gives equal weight to matches found in a product's name, model number and manufacturer's name, as well as those matches found in a product's meta-tags and meta-tag descriptions.  Equal weight is also given to matches found in a product's description (if the <em>Search in Product Descriptions</em> box is checked).</p>
-  <p>This plugin makes a slight update to the processing, giving priority (i.e. they're displayed first) to those matches found in a <em>product's name</em>.  The plugin requires Zen Cart v1.5.8a or later and a PHP version 7.0 or later for its proper operation.</p>
+  <p>This plugin makes a slight update to the processing, giving priority (i.e. they're displayed first) to those matches found in a <em>product's name</em>.  The plugin requires Zen Cart v2.0.0 or later and a PHP version 8.0 or later for its proper operation.</p>
   
   <h2>Installation</h2>
   <p>There are no core-file overwrites in this plugin, nor does it make database modifications; you should <strong>always</strong> backup your cart's database and files prior to making any changes.</p>
@@ -51,6 +51,9 @@ pre { padding-left: 40px; }
   
   <h2>Version History:</h2>
     <ul>
+      <li>v2.0.0, 2024-10-02 (lat9)<ul>
+        <li>BUGFIX: Correcting operation for Zen Cat versions 2.0.0 and later.</li>
+      </ul></li>
       <li>v1.0.1, 2024-05-27 (lat9)<ul>
         <li>BUGFIX: Adding class-defined property for PHP 7.4 and later.</li>
         <li>BUGFIX: Correcting error issued on 'invalid' search keyword.  Also integrates with Zen Cart 1.5.8a and later.</li>
